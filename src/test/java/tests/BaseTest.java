@@ -1,21 +1,25 @@
+package tests;
+
 import drivers.DriverFactory;
-import drivers.DriverManager;
+import logging.BaseLogger;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 
-public abstract class BaseTest {
-    WebDriver driver;
+public abstract class BaseTest implements BaseLogger {
+    public WebDriver driver;
 
     @BeforeEach
     public void setup() {
         //TODO different browsers configuration
-        DriverManager manager = DriverFactory.CHROME.getDriverManager();
-        this.driver = manager.getDriver();
+        driver = new DriverFactory().createInstance("CHROME");
+        logger.info("New browser instance created");
+        driver.get("https://ecommerce-playground.lambdatest.io/");
     }
 
     @AfterEach
     public void close() {
-        driver.close();
+        logger.info("Browser Instance closed");
+        driver.quit();
     }
 }

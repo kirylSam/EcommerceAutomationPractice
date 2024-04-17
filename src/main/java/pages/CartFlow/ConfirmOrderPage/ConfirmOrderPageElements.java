@@ -1,4 +1,4 @@
-package pages.CartPage.ConfirmOrderPage;
+package pages.CartFlow.ConfirmOrderPage;
 
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;

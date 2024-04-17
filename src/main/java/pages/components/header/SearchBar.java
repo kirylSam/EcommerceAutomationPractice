@@ -1,9 +1,8 @@
 package pages.components.header;
 
 import org.openqa.selenium.WebDriver;
-import pages.BasePage;
 import pages.InitPages;
-import pages.search.SearchResultsPage;
+import pages.SearchPage.SearchResultsPage;
 
 public class SearchBar extends InitPages {
     SearchBarElements pageHeaderSearchBarComponentElements;

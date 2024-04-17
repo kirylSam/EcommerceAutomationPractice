@@ -1,2 +1,9 @@
-package logging;public interface BaseLogger {
+package logging;
+
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+public interface BaseLogger {
+    Logger logger = LogManager.getLogger();
 }

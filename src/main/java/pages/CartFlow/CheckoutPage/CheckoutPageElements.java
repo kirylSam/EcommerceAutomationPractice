@@ -1,4 +1,4 @@
-package pages.CartPage.CheckoutPage;
+package pages.CartFlow.CheckoutPage;
 
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +32,7 @@ public class CheckoutPageElements extends InitPages {
     @FindBy(css="#input-payment-postcode")
     private WebElement postCodeInputField;
 
-    @FindBy(css="#button-save")
+    @FindBy(css="button#button-save")
     private WebElement continueButton;
 
     @FindBy(css = "[for='input-agree']")

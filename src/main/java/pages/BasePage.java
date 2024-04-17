@@ -1,13 +1,18 @@
 package pages;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.PageFactory;
+import pages.components.header.HeaderAct;
+import pages.components.header.SearchBar;
 
-public abstract class BasePageElements {
-    WebDriver driver;
+@Getter
+public abstract class BasePage extends InitPages {
+    HeaderAct header;
+    SearchBar searchBar;
 
-    public BasePageElements(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public BasePage(WebDriver driver) {
+        super(driver);
+        this.header = new HeaderAct(driver);
+        this.searchBar = new SearchBar(driver);
     }
 }

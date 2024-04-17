@@ -1,4 +1,4 @@
-package pages.CartPage;
+package pages.CartFlow.CartPage;
 
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;

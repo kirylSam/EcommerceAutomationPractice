@@ -42,7 +42,7 @@ class SearchBarElements extends InitPages {
     @FindBy(css=".dropdown-menu.dropdown-menu-left.show > a:nth-of-type(9)")
     private WebElement searchCategoryMP3;
 
-    @FindBy(css = "div#search > .flex-fill.search-input-group input[name='search']")
+    @FindBy(css = "div#SearchPage > .flex-fill.SearchPage-input-group input[name='SearchPage']")
     private WebElement searchInputField;
 
     @FindBy(css = ".type-text")

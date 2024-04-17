@@ -1,15 +1,14 @@
-package pages.MyAccountDashboard;
+package pages.AccountDashboardPage;
 
 import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.BasePage;
 import pages.InitPages;
 
 @Getter
-public class MyAccountDashboardElements extends InitPages {
-    public MyAccountDashboardElements(WebDriver driver) {
+public class AccountDashboardPageElements extends InitPages {
+    public AccountDashboardPageElements(WebDriver driver) {
         super(driver);
     }
 

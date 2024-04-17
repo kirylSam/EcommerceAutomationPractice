@@ -1,4 +1,4 @@
-package pages.search;
+package pages.SearchPage;
 
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;

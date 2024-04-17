@@ -1,8 +1,12 @@
-package pages.CartPage.ConfirmOrderPage;
+package pages.CartFlow.ConfirmOrderPage;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
-import pages.CartPage.SuccessOrderPage.SuccessOrderPageAct;
+import pages.CartFlow.SuccessOrderPage.SuccessOrderPageAct;
+
+import java.time.Duration;
 
 public class ConfirmOrderPageAct extends BasePage {
     WebDriver driver;
@@ -15,6 +19,8 @@ public class ConfirmOrderPageAct extends BasePage {
     }
 
     public SuccessOrderPageAct clickConfirmOrderButton() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(confirmOrderPageElements.getConfirmOrderButton()));
         confirmOrderPageElements.getConfirmOrderButton().click();
         return new SuccessOrderPageAct(driver);
     }
